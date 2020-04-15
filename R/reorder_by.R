@@ -119,7 +119,7 @@ reorder_by <- function(fact, by, data, FUN = NULL, df = TRUE){
             }
         }
     }
-    data[[fact]] <- factor(data[, fact], levels = x[do.call("order", calllist), fact])
+    data[[fact]] <- factor(data[[fact]], levels = x[do.call("order", calllist), fact])
     if (df) {
         data
     } else {
